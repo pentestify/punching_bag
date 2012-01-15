@@ -5,9 +5,11 @@ require 'test/unit'
 
 class TestPunchingBag < Test::Unit::TestCase
 
-  def test_connect
+  def test_create_machine_and_run_command
     c = PunchingBag::Controller.new
-    assert c.connect.kind_of? Fog::Compute::AWS::Real
+		c[0].start
+		c[0].run_command "cat /etc/passwd"
+		c[0].terminate
   end
 
 end
