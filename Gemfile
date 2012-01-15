@@ -1,4 +1,5 @@
 source :rubygems
 
-gem 'fog'
-
+gem 'thor'
+gem 'aws-sdk'
+gem 'net-ssh'

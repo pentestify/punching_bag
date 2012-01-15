@@ -1,0 +1,20 @@
+##
+## This is the configuration file for vulnerable amazon images
+##
+## TODO: Parse http://thecloudmarket.com/
+##
+ - name: ubuntu_606_dapper_x86
+   user: root
+   type: ami
+   id: ami-3d48ad54
+   description: Ubuntu 6.06 x86 LTS (Alestic)
+ - name: ubuntu_606_dapper_x64
+   user: root
+   type: ami
+   id:  ami-3fbc5856
+   description: Ubuntu 6.06 x64 LTS (Alestic)
+ - name: ubuntu_704_server_x86
+   user: root
+   type: ami
+   id: ami-cd9e7aa4
+   description: Ubuntu 7.04 Server x86 (Alestic)
