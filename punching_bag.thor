@@ -10,8 +10,6 @@ class X < Thor
     puts "Starting vulnerable system: #{name}"
     controller = PunchingBag::Controller.new
     controller[name].start
-    puts "YOU CANNOT CURRENTLY USE PUNCHING BAG TO SHUT IT DOWN"
-    puts "PLEASE LOG INTO THE WEB UI & TERMINATE"
   end
 
 end
