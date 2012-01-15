@@ -27,4 +27,4 @@ Using security group: ubuntu_606_dapper_x86_1326612912
 Launched instance i-2e143c4c, status: running
 The system can be found at: 67.202.42.50
 System info: Linux domU-12-31-39-15-31-74 2.6.16-xenU #1 SMP Mon May 28 03:41:49 SAST 2007 i686 GNU/Linux
-Connect to this box with: ssh -i /home/jcran/secure/personal/projects/punching_bag/lib/../keys/ubuntu_606_dapper_x86_1326612911 root@67.202.42.50
+Connect to this box with: ssh -i keys/ubuntu_606_dapper_x86_1326612911 root@67.202.42.50
