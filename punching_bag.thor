@@ -11,5 +11,13 @@ class X < Thor
     controller = PunchingBag::Controller.new
     controller[name].start
   end
+  
+  desc "list", "List the vulnerable systems"
+  def list
+    puts "Listing vulnerable systems:"
+    controller = PunchingBag::Controller.new
+    controller.each { |vm| puts "#{vm.name}: #{vm.description}" }
+  end
+
 
 end

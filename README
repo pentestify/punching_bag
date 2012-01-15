@@ -1,1 +1,30 @@
-Punching Bag is a utility that makes it dead simple to start and configure vulnerable machines in the cloud. Use it for penetration testing training.
+Punching Bag is a utility that makes it dead simple to start and configure 
+vulnerable machines in the cloud. Use it for penetration testing training.
+
+How to use: 
+
+Install the prerequisite gems with bundler. Do a 'bundle  install' in the root
+directory. If you have troubles with this, try 'gem install bundler.'
+
+Copy config/pb_config.yml.sample to config/pb_config.yml and add your Amazon 
+keys. These can be found in the AWS Console at http://aws.amazon.com (Browse to 
+account -> Security Credentials).
+
+Once you've configure the pb_config.yml file, you can start machines with the 
+thor commands. 'thor x:start <machinename>' -- You can find the machine names by
+ running 'thor x:list'.
+ 
+$ thor x:list
+Listing vulnerable systems:
+ubuntu_606_dapper_x86: Ubuntu 6.06 x86 LTS (Alestic)
+ubuntu_606_dapper_x64: Ubuntu 6.06 x64 LTS (Alestic)
+ubuntu_704_server_x86: Ubuntu 7.04 Server x86 (Alestic)
+
+$ thor x:start --name ubuntu_606_dapper_x86
+Starting vulnerable system: ubuntu_606_dapper_x86
+Generated keypair ubuntu_606_dapper_x86_1326612911, fingerprint: 4e:28:c0:de:ec:9f:2f:c5:2b:34:15:48:0b:ed:ab:3b:4f:dc:93:a5
+Using security group: ubuntu_606_dapper_x86_1326612912
+Launched instance i-2e143c4c, status: running
+The system can be found at: 67.202.42.50
+System info: Linux domU-12-31-39-15-31-74 2.6.16-xenU #1 SMP Mon May 28 03:41:49 SAST 2007 i686 GNU/Linux
+Connect to this box with: ssh -i /home/jcran/secure/personal/projects/punching_bag/lib/../keys/ubuntu_606_dapper_x86_1326612911 root@67.202.42.50
