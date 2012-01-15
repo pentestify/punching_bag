@@ -4,7 +4,7 @@ vulnerable machines in the cloud. Use it for penetration testing training.
 How to use: 
 
 Install the prerequisite gems with bundler. Do a 'bundle  install' in the root
-directory. If you have troubles with this, try 'gem install bundler.'
+directory. If you have troubles with this, try 'gem install bundler'.
 
 Copy config/pb_config.yml.sample to config/pb_config.yml and add your Amazon 
 keys. These can be found in the AWS Console at http://aws.amazon.com (Browse to 
